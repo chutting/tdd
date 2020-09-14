@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MommifierTest {
   @Test
@@ -24,5 +25,14 @@ public class MommifierTest {
     String inputString = "keap";
     String outputStr = insertMommy.insert(inputString);
     assertEquals(inputString, outputStr);
+  }
+
+  @Test
+  void string_is_empty_then_throws_exception() {
+    InsertMommy insertMommy = new InsertMommy();
+    String inputString = "";
+    assertThrows(StringIsEmptyException.class, () -> {
+      insertMommy.insert(inputString);
+    }) ;
   }
 }

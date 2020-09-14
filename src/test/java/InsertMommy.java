@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 public class InsertMommy {
   public String insert(String originalString) {
+    if (originalString.isEmpty()) {
+      throw new StringIsEmptyException();
+    }
     int originalStringLength = originalString.length();
     StringBuffer stringBuffer = new StringBuffer(originalString);
     int insertMommyCount = 0;
