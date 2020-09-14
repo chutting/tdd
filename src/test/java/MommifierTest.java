@@ -17,4 +17,12 @@ public class MommifierTest {
     String outputStr = insertMommy.insert(inputString);
     assertEquals(inputString, outputStr);
   }
+
+  @Test
+  void string_does_not_contain_repeat_vowels() {
+    InsertMommy insertMommy = new InsertMommy();
+    String inputString = "keap";
+    String outputStr = insertMommy.insert(inputString);
+    assertEquals(inputString, outputStr);
+  }
 }
